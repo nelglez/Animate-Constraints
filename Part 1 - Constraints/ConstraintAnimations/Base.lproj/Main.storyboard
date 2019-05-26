@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConstraintAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udC-u8-vx2">
+                                <rect key="frame" x="123.5" y="40" width="128" height="128"/>
+                                <color key="backgroundColor" red="0.88135524610000004" green="0.10679993979999999" blue="0.055284933889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="3Wz-rm-Qp0"/>
+                                    <constraint firstAttribute="width" secondItem="udC-u8-vx2" secondAttribute="height" multiplier="1:1" id="ySf-ye-vsN"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v17-ha-fIJ">
+                                <rect key="frame" x="159" y="617" width="57" height="30"/>
+                                <state key="normal" title="Animate"/>
+                                <connections>
+                                    <action selector="animateSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B5X-lA-SjE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEr-63-ube">
+                                <rect key="frame" x="233" y="617" width="136" height="30"/>
+                                <state key="normal" title="Change Constraints"/>
+                                <connections>
+                                    <action selector="changeConstraints:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WQD-D8-qq8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v17-ha-fIJ" secondAttribute="bottom" constant="20" id="9H5-BI-aEV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="udC-u8-vx2" secondAttribute="bottom" constant="50" id="F3V-kE-n2i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cEr-63-ube" secondAttribute="bottom" constant="20" id="icH-Rx-AWu"/>
+                            <constraint firstItem="v17-ha-fIJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nNZ-dn-B8R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cEr-63-ube" secondAttribute="trailing" constant="6" id="q41-RA-BUa"/>
+                            <constraint firstItem="udC-u8-vx2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vr0-XK-X1q"/>
+                            <constraint firstItem="udC-u8-vx2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="y38-dP-2wL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="F3V-kE-n2i"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="redView" destination="udC-u8-vx2" id="9zT-fL-dmW"/>
+                        <outlet property="redViewAspectRatioConstraint" destination="ySf-ye-vsN" id="ay1-NS-jcz"/>
+                        <outlet property="redViewBottomConstraint" destination="F3V-kE-n2i" id="o0A-UV-EX2"/>
+                        <outlet property="redViewHeightConstraint" destination="3Wz-rm-Qp0" id="lbP-fI-2aY"/>
+                        <outlet property="redViewTopConstraint" destination="y38-dP-2wL" id="apv-k9-Il1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
